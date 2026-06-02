@@ -2,21 +2,21 @@
 
 ## 1. Identificação e visão geral
 
-#### Integrantes do grupo:
+### Integrantes do grupo:
 Gustavo Raasch, 
 Helena de Oliveira, 
 João Santos e 
 Rafaela Mafra
 
-#### Mockup:
+### Mockup:
 Mobile: https://canva.link/0d6t4vr35m97l49 
 
 Desktop: https://canva.link/jzg7mnsal2294sn
 
-#### Resumo do sistema:
+### Resumo do sistema:
 O Ferrorama é um sistema de monitoramento ferroviário desenvolvido para acompanhar o desempenho da frota de trens em tempo real. O sistema permite visualizar informações sobre trens, sensores, relatórios e usuários, facilitando o trabalho de operadores, técnicos e administradores. Seu diferencial é centralizar todas as informações em uma interface simples, moderna e responsiva, acessível tanto em dispositivos móveis quanto em computadores.
 
-#### Decisões Técnicas:
+### Decisões Técnicas:
 -HTML: 
 Utilizaremos HTML para estruturar as páginas do sistema de forma semântica e organizada.
 
@@ -41,12 +41,12 @@ js/|-auth.js|-dashboard.js|-trens.js|-sensores.js|-relatorios.js|-usuarios.js|-m
 
 assets/|-logo.png
 
-#### Justificativa:
+### Justificativa:
 A separação dos arquivos facilita a manutenção do projeto e evita códigos excessivamente grandes. Os arquivos CSS foram divididos entre estilos gerais e componentes reutilizáveis. Os arquivos JavaScript foram separados por funcionalidade para facilitar futuras correções e melhorias. Os recursos visuais foram agrupados na pasta assets para manter a organização.
 
 ## 3. Componentes Reutilizáveis Identificados
 
-#### Componente:
+### Componente:
   1. Botão Primário
   2. Campo de Entrada
   3. Sidebar
@@ -56,7 +56,7 @@ A separação dos arquivos facilita a manutenção do projeto e evita códigos e
   7. Modal de Confirmação
   8. Cabeçalho
 
-#### Telas em que aparece:
+### Telas em que aparece:
   1. Login, Cadastro, Relatórios, Usuários
   2. Login, Cadastro, Relatórios
   3. Dashboard, Trens, Sensores, Relatórios, Usuários
@@ -66,7 +66,7 @@ A separação dos arquivos facilita a manutenção do projeto e evita códigos e
   7. Usuários, Trens
   8. Todas as páginas internas
 
-#### Variações observadas:
+### Variações observadas:
   1. Normal, Hover, Desabilitado
   2. Vazio, Preenchido, Erro
   3. Item ativo e inativo
