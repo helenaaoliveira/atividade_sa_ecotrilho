@@ -32,9 +32,13 @@ Não serão utilizados frameworks nesta etapa do projeto. A escolha foi feita pa
 ### 2. Arquitetura de Arquivos e Pastas
 
 ferrorama/|-index.html
+
 pages/|-dashboard.html|-trens.html|-sensores.html|-relatorios.html|-usuarios.html|-configuracoes.html|-cadastro.html|-recuperar-senha.html
+
 css/|-style.css
+
 js/|-auth.js|-dashboard.js|-trens.js|-sensores.js|-relatorios.js|-usuarios.js|-main.js|-configuracoes.js
+
 assets/|-logo.png
 
 #### Justificativa:
