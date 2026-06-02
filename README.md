@@ -2,20 +2,20 @@
 
 ### 1. Identificação e visão geral
 
-Integrantes do grupo:
+#### Integrantes do grupo:
 Gustavo Raasch
 Helena de Oliveira
 João Santos 
 Rafaela Mafra
 
-Mockup:
+#### Mockup:
 Mobile: https://canva.link/0d6t4vr35m97l49 
 Desktop: https://canva.link/jzg7mnsal2294sn
 
-Resumo do sistema:
+#### Resumo do sistema:
 O Ferrorama é um sistema de monitoramento ferroviário desenvolvido para acompanhar o desempenho da frota de trens em tempo real. O sistema permite visualizar informações sobre trens, sensores, relatórios e usuários, facilitando o trabalho de operadores, técnicos e administradores. Seu diferencial é centralizar todas as informações em uma interface simples, moderna e responsiva, acessível tanto em dispositivos móveis quanto em computadores.
 
-Decisões Técnicas:
+#### Decisões Técnicas:
 -HTML
 Utilizaremos HTML para estruturar as páginas do sistema de forma semântica e organizada.
 -CSS
@@ -33,12 +33,12 @@ css/|-style.css
 js/|-auth.js|-dashboard.js|-trens.js|-sensores.js|-relatorios.js|-usuarios.js|-main.js|-configuracoes.js
 assets/|-logo.png
 
-Justificativa:
+#### Justificativa:
 A separação dos arquivos facilita a manutenção do projeto e evita códigos excessivamente grandes. Os arquivos CSS foram divididos entre estilos gerais e componentes reutilizáveis. Os arquivos JavaScript foram separados por funcionalidade para facilitar futuras correções e melhorias. Os recursos visuais foram agrupados na pasta assets para manter a organização.
 
 ### 3. Componentes Reutilizáveis Identificados
 
-Componente:
+#### Componente:
   1. Botão Primário
   2. Campo de Entrada
   3. Sidebar
@@ -48,7 +48,7 @@ Componente:
   7. Modal de Confirmação
   8. Cabeçalho
 
-Telas em que aparece:
+#### Telas em que aparece:
   1. Login, Cadastro, Relatórios, Usuários
   2. Login, Cadastro, Relatórios
   3. Dashboard, Trens, Sensores, Relatórios, Usuários
@@ -58,7 +58,7 @@ Telas em que aparece:
   7. Usuários, Trens
   8. Todas as páginas internas
 
-Variações observadas:
+#### Variações observadas:
   1. Normal, Hover, Desabilitado
   2. Vazio, Preenchido, Erro
   3. Item ativo e inativo
@@ -71,19 +71,19 @@ Variações observadas:
 
 ### 4. Ordem de Implementação
 
-Etapa 1 – Estrutura Base
+#### Etapa 1 – Estrutura Base
 Desenvolvimento da estrutura HTML principal, configuração de pastas e criação dos arquivos do projeto.
-Etapa 2 – Componentes Reutilizáveis
+#### Etapa 2 – Componentes Reutilizáveis
 Criação dos botões, inputs, sidebar, cards e tabelas, pois serão utilizados em várias telas.
-Etapa 3 – Sistema de Autenticação
+#### Etapa 3 – Sistema de Autenticação
 Implementação das telas de Login e Cadastro, incluindo validações e controle de acesso.
-Etapa 4 – Dashboard
+#### Etapa 4 – Dashboard
 Desenvolvimento da página principal, responsável por apresentar os indicadores gerais do sistema.
-Etapa 5 – Trens e Sensores
+#### Etapa 5 – Trens e Sensores
 Implementação das páginas de monitoramento, pois dependem da navegação criada anteriormente.
-Etapa 6 – Relatórios
+#### Etapa 6 – Relatórios
 Desenvolvimento dos filtros, gráficos e geração de relatórios.
-Etapa 7 – Usuários
+#### Etapa 7 – Usuários
 Implementação das funções de cadastro, edição e gerenciamento de usuários.
-Etapa 8 – Testes e Correções
+#### Etapa 8 – Testes e Correções
 Validação geral do sistema, correção de erros e ajustes de responsividade.
