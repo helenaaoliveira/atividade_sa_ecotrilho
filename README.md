@@ -95,3 +95,55 @@ Desenvolvimento dos filtros, gráficos e geração de relatórios.
 Implementação das funções de cadastro, edição e gerenciamento de usuários.
 #### Etapa 8 – Testes e Correções
 Validação geral do sistema, correção de erros e ajustes de responsividade.
+
+### 5. Fluxos de Navegação do Usuário
+
+#### Fluxo 1 – Cadastro e Primeiro Acesso
+Perfil: Novo usuário
+  1. Tela de Login
+  2. Clica em "Cadastre-se"
+  3. Tela de Cadastro
+  4. Preenche os dados
+  5. Clica em "Cadastrar"
+  6. Sistema valida os dados
+  7. Dashboard
+
+
+#### Fluxo 2 – Operador Verifica Trem com Alerta
+Perfil: Operador
+  1. Login
+  2. Dashboard
+  3. Visualiza alerta crítico
+  4. Acessa página de Trens
+  5. Seleciona o trem afetado
+  6. Visualiza histórico e sensores relacionados
+
+
+#### Fluxo 3 – Técnico Gera Relatório
+Perfil: Técnico
+  1. Login
+  2. Dashboard
+  3. Página de Relatórios
+  4. Seleciona período
+  5. Seleciona tipo de relatório
+  6. Gera relatório
+  7. Visualiza resultados
+
+
+#### Fluxo 4 – Administrador Gerencia Usuários
+Perfil: Administrador
+  1. Login
+  2. Dashboard
+  3. Página de Usuários
+  4. Seleciona usuário
+  5. Edita ou desativa conta
+  6. Sistema atualiza informações
+  7. Lista é atualizada
+
+
+#### Fluxo 5 – Logout
+Perfil: Todos os usuários
+  1. Dashboard
+  2. Clica em "Sair"
+  3. Sistema encerra sessão
+  4. Retorna para a tela de Login
