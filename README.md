@@ -25,7 +25,7 @@ Será utilizado JavaScript puro para implementar validações, navegação entre
 -Frameworks
 Não serão utilizados frameworks nesta etapa do projeto. A escolha foi feita para fortalecer o aprendizado dos conceitos fundamentais de desenvolvimento web.
 
-2. Arquitetura de Arquivos e Pastas
+### 2. Arquitetura de Arquivos e Pastas
 
 ferrorama/|-index.html
 pages/|-dashboard.html|-trens.html|-sensores.html|-relatorios.html|-usuarios.html|-configuracoes.html|-cadastro.html|-recuperar-senha.html
@@ -36,7 +36,7 @@ assets/|-logo.png
 Justificativa:
 A separação dos arquivos facilita a manutenção do projeto e evita códigos excessivamente grandes. Os arquivos CSS foram divididos entre estilos gerais e componentes reutilizáveis. Os arquivos JavaScript foram separados por funcionalidade para facilitar futuras correções e melhorias. Os recursos visuais foram agrupados na pasta assets para manter a organização.
 
-3. Componentes Reutilizáveis Identificados
+### 3. Componentes Reutilizáveis Identificados
 
 Componente:
   1. Botão Primário
@@ -69,7 +69,7 @@ Variações observadas:
   8. Título e ações
 
 
-4. Ordem de Implementação
+### 4. Ordem de Implementação
 
 Etapa 1 – Estrutura Base
 Desenvolvimento da estrutura HTML principal, configuração de pastas e criação dos arquivos do projeto.
