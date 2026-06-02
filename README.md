@@ -17,16 +17,16 @@ Desktop: https://canva.link/jzg7mnsal2294sn
 O Ferrorama é um sistema de monitoramento ferroviário desenvolvido para acompanhar o desempenho da frota de trens em tempo real. O sistema permite visualizar informações sobre trens, sensores, relatórios e usuários, facilitando o trabalho de operadores, técnicos e administradores. Seu diferencial é centralizar todas as informações em uma interface simples, moderna e responsiva, acessível tanto em dispositivos móveis quanto em computadores.
 
 #### Decisões Técnicas:
--HTML
+-HTML: 
 Utilizaremos HTML para estruturar as páginas do sistema de forma semântica e organizada.
 
--CSS
+-CSS: 
 Será utilizado CSS puro para garantir maior controle sobre a aparência da interface e fidelidade ao mockup desenvolvido.
 
--JavaScript
+-JavaScript: 
 Será utilizado JavaScript puro para implementar validações, navegação entre telas, filtros, autenticação simulada e manipulação dinâmica de dados.
 
--Frameworks
+-Frameworks: 
 Não serão utilizados frameworks nesta etapa do projeto. A escolha foi feita para fortalecer o aprendizado dos conceitos fundamentais de desenvolvimento web.
 
 ### 2. Arquitetura de Arquivos e Pastas
