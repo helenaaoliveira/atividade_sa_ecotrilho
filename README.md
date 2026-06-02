@@ -19,10 +19,13 @@ O Ferrorama é um sistema de monitoramento ferroviário desenvolvido para acompa
 #### Decisões Técnicas:
 -HTML
 Utilizaremos HTML para estruturar as páginas do sistema de forma semântica e organizada.
+
 -CSS
 Será utilizado CSS puro para garantir maior controle sobre a aparência da interface e fidelidade ao mockup desenvolvido.
+
 -JavaScript
 Será utilizado JavaScript puro para implementar validações, navegação entre telas, filtros, autenticação simulada e manipulação dinâmica de dados.
+
 -Frameworks
 Não serão utilizados frameworks nesta etapa do projeto. A escolha foi feita para fortalecer o aprendizado dos conceitos fundamentais de desenvolvimento web.
 
