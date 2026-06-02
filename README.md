@@ -3,9 +3,9 @@
 ### 1. Identificação e visão geral
 
 #### Integrantes do grupo:
-Gustavo Raasch
-Helena de Oliveira
-João Santos 
+Gustavo Raasch, 
+Helena de Oliveira, 
+João Santos e 
 Rafaela Mafra
 
 #### Mockup:
