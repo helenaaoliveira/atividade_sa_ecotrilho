@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Sensores</title>
+
+<link
+rel="stylesheet"
+href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="system-body">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>🚂 Ferrorama</h2>
+
+<nav>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="trens.html">
+Trens
+</a>
+
+<a
+class="active"
+href="sensores.html">
+Sensores
+</a>
+
+<a id="menuRelatorios"
+href="relatorios.html">
+Relatórios
+</a>
+
+<a id="menuUsuarios"
+href="usuarios.html">
+Usuários
+</a>
+
+<a id="menuConfiguracoes"
+href="configuracoes.html">
+Configurações
+</a>
+
+<a href="#"
+onclick="logout()">
+Sair
+</a>
+
+</nav>
+
+</aside>
+
+<!-- CONTEÚDO -->
+
+<main class="main">
+
+<div class="topbar">
+
+<h1>
+Monitoramento de Sensores
+</h1>
+
+<button
+class="btn-add"
+onclick="abrirModalSensor()">
+
+Novo Sensor
+
+</button>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="cards">
+
+<div class="card">
+
+<h2 id="totalSensores">
+0
+</h2>
+
+<p>
+Total de Sensores
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="sensoresCriticos">
+0
+</h2>
+
+<p>
+Sensores Críticos
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="sensoresAtencao">
+0
+</h2>
+
+<p>
+Sensores em Atenção
+</p>
+
+</div>
+
+</div>
+
+<!-- FILTROS -->
+
+<div class="trens-top">
+
+<input
+type="text"
+id="buscarSensor"
+placeholder="Pesquisar sensor..."
+onkeyup="filtrarSensores()">
+
+<select
+id="statusSensor"
+onchange="filtrarSensores()">
+
+<option value="">
+Todos
+</option>
+
+<option value="Normal">
+Normal
+</option>
+
+<option value="Atenção">
+Atenção
+</option>
+
+<option value="Crítico">
+Crítico
+</option>
+
+</select>
+
+<button
+class="btn-add"
+onclick="ordenarSensores()">
+
+Ordenar
+
+</button>
+
+</div>
+
+<!-- TABELA + DETALHES -->
+
+<div class="trens-container">
+
+<div class="trens-lista">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Tipo</th>
+<th>Trem</th>
+<th>Leitura</th>
+<th>Status</th>
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaSensores">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- PAINEL -->
+
+<div class="painel-detalhes">
+
+<h2 id="sensorTitulo">
+
+Selecione um Sensor
+
+</h2>
+
+<div class="info-box">
+
+<h3>Última Leitura</h3>
+
+<p id="ultimaLeitura">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Faixa Esperada</h3>
+
+<p id="faixaEsperada">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Status Atual</h3>
+
+<p id="statusAtual">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Trem Vinculado</h3>
+
+<p id="tremVinculado">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Última Atualização</h3>
+
+<p id="ultimaAtualizacaoSensor">
+-
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- MODAL -->
+
+<div
+class="modal"
+id="modalSensor">
+
+<div class="modal-content">
+
+<h2 id="tituloModalSensor">
+
+Novo Sensor
+
+</h2>
+
+<input
+type="hidden"
+id="sensorId">
+
+<input
+type="text"
+id="codigoSensor"
+placeholder="Código do Sensor">
+
+<select id="tipoSensor">
+
+<option value="Temperatura">
+Temperatura
+</option>
+
+<option value="Vibração">
+Vibração
+</option>
+
+<option value="Pressão">
+Pressão
+</option>
+
+<option value="Velocidade">
+Velocidade
+</option>
+
+</select>
+
+<input
+type="text"
+id="tremSensor"
+placeholder="Trem Vinculado">
+
+<input
+type="text"
+id="leituraSensor"
+placeholder="Leitura Atual">
+
+<select id="statusSensorInput">
+
+<option value="Normal">
+Normal
+</option>
+
+<option value="Atenção">
+Atenção
+</option>
+
+<option value="Crítico">
+Crítico
+</option>
+
+</select>
+
+<div class="modal-buttons">
+
+<button
+class="btn-add"
+onclick="salvarSensor()">
+
+Salvar
+
+</button>
+
+<button
+class="btn-delete"
+onclick="fecharModalSensor()">
+
+Cancelar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/main.js"></script>
+
+<script src="../js/sensores.js"></script>
+
+</body>
+
+</html>

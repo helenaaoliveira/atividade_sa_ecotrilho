@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Configurações</title>
+
+<link
+rel="stylesheet"
+href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="system-body">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>🚂 Ferrorama</h2>
+
+<nav>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="trens.html">
+Trens
+</a>
+
+<a href="sensores.html">
+Sensores
+</a>
+
+<a id="menuRelatorios"
+href="relatorios.html">
+Relatórios
+</a>
+
+<a id="menuUsuarios"
+href="usuarios.html">
+Usuários
+</a>
+
+<a
+class="active"
+id="menuConfiguracoes"
+href="configuracoes.html">
+Configurações
+</a>
+
+<a href="#"
+onclick="logout()">
+Sair
+</a>
+
+</nav>
+
+</aside>
+
+<!-- CONTEÚDO -->
+
+<main class="main">
+
+<div class="topbar">
+
+<h1>
+Configurações do Sistema
+</h1>
+
+</div>
+
+<div class="config-grid">
+
+<!-- PERFIL -->
+
+<div class="config-card">
+
+<h2>
+Perfil
+</h2>
+
+<input
+type="text"
+id="nomePerfil"
+placeholder="Nome">
+
+<br><br>
+
+<input
+type="email"
+id="emailPerfil"
+placeholder="Email">
+
+<br><br>
+
+<button
+class="btn-add"
+onclick="salvarPerfil()">
+
+Salvar Perfil
+
+</button>
+
+</div>
+
+<!-- TEMA -->
+
+<div class="config-card">
+
+<h2>
+Tema
+</h2>
+
+<p>
+Alternar entre tema claro e escuro.
+</p>
+
+<br>
+
+<button
+class="btn-add"
+onclick="alterarTema()">
+
+Alternar Dark Mode
+
+</button>
+
+</div>
+
+<!-- NOTIFICAÇÕES -->
+
+<div class="config-card">
+
+<h2>
+Notificações
+</h2>
+
+<label>
+
+<input
+type="checkbox"
+id="notificacoes">
+
+ Receber alertas automáticos
+
+</label>
+
+<br><br>
+
+<button
+class="btn-add"
+onclick="salvarNotificacoes()">
+
+Salvar Preferências
+
+</button>
+
+</div>
+
+<!-- SISTEMA -->
+
+<div class="config-card">
+
+<h2>
+Informações do Sistema
+</h2>
+
+<p>
+
+Versão:
+<strong id="versaoSistema">
+
+-
+
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Banco de Dados:
+<strong id="statusBanco">
+
+-
+
+</strong>
+
+</p>
+
+</div>
+
+<!-- RESTAURAR -->
+
+<div class="config-card">
+
+<h2>
+Restaurar Configurações
+</h2>
+
+<p>
+
+Voltar todas as configurações para o padrão.
+
+</p>
+
+<br>
+
+<button
+class="btn-delete"
+onclick="restaurarPadrao()">
+
+Restaurar
+
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="../js/main.js"></script>
+
+<script src="../js/configuracoes.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Cadastro</title>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <h1>🚂 Ferrorama</h1>
+    </div>
+
+    <p class="subtitle">
+        Criar nova conta
+    </p>
+
+    <div id="mensagem" class="message"></div>
+
+    <div class="form-group">
+        <label>Nome completo</label>
+        <input id="nome">
+    </div>
+
+    <div class="form-group">
+        <label>Usuário</label>
+        <input id="usuario">
+    </div>
+
+    <div class="form-group">
+        <label>E-mail</label>
+        <input id="email">
+    </div>
+
+    <div class="form-group">
+        <label>Senha</label>
+        <input id="senha" type="password">
+    </div>
+
+    <div class="form-group">
+        <label>Confirmar senha</label>
+        <input id="confirmar" type="password">
+    </div>
+
+    <button class="btn" onclick="cadastrar()">
+        Cadastrar
+    </button>
+
+    <div class="links">
+
+        <a href="../index.html">
+            Já possui conta? Entrar
+        </a>
+
+    </div>
+
+</div>
+
+<script src="../js/auth.js"></script>
+
+</body>
+</html>

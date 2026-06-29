@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Trens</title>
+
+<link
+rel="stylesheet"
+href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="system-body">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>🚂 Ferrorama</h2>
+
+<nav>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a
+class="active"
+href="trens.html">
+Trens
+</a>
+
+<a href="sensores.html">
+Sensores
+</a>
+
+<a id="menuRelatorios"
+href="relatorios.html">
+Relatórios
+</a>
+
+<a id="menuUsuarios"
+href="usuarios.html">
+Usuários
+</a>
+
+<a id="menuConfiguracoes"
+href="configuracoes.html">
+Configurações
+</a>
+
+<a href="#"
+onclick="logout()">
+Sair
+</a>
+
+</nav>
+
+</aside>
+
+<!-- CONTEÚDO -->
+
+<main class="main">
+
+<div class="topbar">
+
+<h1>
+Gerenciamento de Trens
+</h1>
+
+<button
+class="btn-add"
+onclick="abrirModalTrem()">
+
+Novo Trem
+
+</button>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="cards">
+
+<div class="card">
+
+<h2 id="totalTrens">
+0
+</h2>
+
+<p>
+Total de Trens
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="trensAtivos">
+0
+</h2>
+
+<p>
+Trens Ativos
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="trensManutencao">
+0
+</h2>
+
+<p>
+Em Manutenção
+</p>
+
+</div>
+
+</div>
+
+<!-- FILTROS -->
+
+<div class="trens-top">
+
+<input
+type="text"
+id="buscarTrem"
+placeholder="Pesquisar trem..."
+onkeyup="filtrarTrens()">
+
+<select
+id="statusFiltro"
+onchange="filtrarTrens()">
+
+<option value="">
+Todos
+</option>
+
+<option value="Ativo">
+Ativo
+</option>
+
+<option value="Manutenção">
+Manutenção
+</option>
+
+<option value="Parado">
+Parado
+</option>
+
+</select>
+
+<button
+class="btn-add"
+onclick="ordenarTrens()">
+
+Ordenar
+
+</button>
+
+</div>
+
+<!-- LISTA + DETALHES -->
+
+<div class="trens-container">
+
+<div class="trens-lista">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Nome</th>
+<th>Status</th>
+<th>Velocidade</th>
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaTrens">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- DETALHES -->
+
+<div class="painel-detalhes">
+
+<h2 id="nomeTrem">
+
+Selecione um trem
+
+</h2>
+
+<div class="info-box">
+
+<h3>Velocidade</h3>
+
+<p id="velocidadeAtual">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Última Atualização</h3>
+
+<p id="ultimaAtualizacao">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Modelo</h3>
+
+<p id="modelo">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Ano</h3>
+
+<p id="ano">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Capacidade</h3>
+
+<p id="capacidade">
+-
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Comprimento</h3>
+
+<p id="comprimento">
+-
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- MODAL -->
+
+<div
+class="modal"
+id="modalTrem">
+
+<div class="modal-content">
+
+<h2 id="tituloModalTrem">
+
+Novo Trem
+
+</h2>
+
+<input
+type="hidden"
+id="tremId">
+
+<input
+type="text"
+id="codigoTrem"
+placeholder="Código do Trem">
+
+<input
+type="text"
+id="nomeTremInput"
+placeholder="Nome do Trem">
+
+<select id="statusTrem">
+
+<option value="Ativo">
+Ativo
+</option>
+
+<option value="Manutenção">
+Manutenção
+</option>
+
+<option value="Parado">
+Parado
+</option>
+
+</select>
+
+<input
+type="text"
+id="velocidadeTrem"
+placeholder="Velocidade">
+
+<input
+type="text"
+id="localizacaoTrem"
+placeholder="Localização">
+
+<div class="modal-buttons">
+
+<button
+class="btn-add"
+onclick="salvarTrem()">
+
+Salvar
+
+</button>
+
+<button
+class="btn-delete"
+onclick="fecharModalTrem()">
+
+Cancelar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/main.js"></script>
+
+<script src="../js/trens.js"></script>
+
+</body>
+
+</html>

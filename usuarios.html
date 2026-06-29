@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Usuários</title>
+
+<link
+rel="stylesheet"
+href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="system-body">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>🚂 Ferrorama</h2>
+
+<nav>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="trens.html">
+Trens
+</a>
+
+<a href="sensores.html">
+Sensores
+</a>
+
+<a id="menuRelatorios"
+href="relatorios.html">
+Relatórios
+</a>
+
+<a class="active"
+id="menuUsuarios"
+href="usuarios.html">
+Usuários
+</a>
+
+<a id="menuConfiguracoes"
+href="configuracoes.html">
+Configurações
+</a>
+
+<a href="#"
+onclick="logout()">
+Sair
+</a>
+
+</nav>
+
+</aside>
+
+<!-- CONTEÚDO -->
+
+<main class="main">
+
+<div class="topbar">
+
+<h1>
+Gerenciamento de Usuários
+</h1>
+
+<button
+class="btn-add"
+onclick="abrirModal()">
+
+Novo Usuário
+
+</button>
+
+</div>
+
+<!-- ESTATÍSTICAS -->
+
+<div class="cards">
+
+<div class="card">
+
+<h2 id="totalUsuarios">
+0
+</h2>
+
+<p>
+Total de Usuários
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="totalAdmins">
+0
+</h2>
+
+<p>
+Administradores
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="totalTecnicos">
+0
+</h2>
+
+<p>
+Técnicos
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="totalOperadores">
+0
+</h2>
+
+<p>
+Operadores
+</p>
+
+</div>
+
+</div>
+
+<!-- FILTROS -->
+
+<div class="filtros">
+
+<input
+type="text"
+id="busca"
+placeholder="Pesquisar usuário..."
+onkeyup="filtrarUsuarios()">
+
+<select
+id="perfilFiltro"
+onchange="filtrarUsuarios()">
+
+<option value="">
+Todos os Perfis
+</option>
+
+<option value="Admin">
+Admin
+</option>
+
+<option value="Operador">
+Operador
+</option>
+
+<option value="Técnico">
+Técnico
+</option>
+
+</select>
+
+<button
+class="btn-add"
+onclick="ordenarUsuarios()">
+
+Ordenar
+
+</button>
+
+</div>
+
+<!-- TABELA -->
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nome</th>
+<th>Email</th>
+<th>Perfil</th>
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelaUsuarios">
+
+</tbody>
+
+</table>
+
+</main>
+
+<!-- MODAL -->
+
+<div
+class="modal"
+id="modal">
+
+<div class="modal-content">
+
+<h2 id="tituloModal">
+
+Novo Usuário
+
+</h2>
+
+<input
+type="hidden"
+id="usuarioId">
+
+<input
+type="text"
+id="nome"
+placeholder="Nome">
+
+<input
+type="email"
+id="email"
+placeholder="Email">
+
+<select id="perfil">
+
+<option value="Admin">
+Administrador
+</option>
+
+<option value="Operador">
+Operador
+</option>
+
+<option value="Técnico">
+Técnico
+</option>
+
+</select>
+
+<div class="modal-buttons">
+
+<button
+class="btn-add"
+onclick="salvarUsuario()">
+
+Salvar
+
+</button>
+
+<button
+class="btn-delete"
+onclick="fecharModal()">
+
+Cancelar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/main.js"></script>
+
+<script src="../js/usuarios.js"></script>
+
+</body>
+
+</html>
