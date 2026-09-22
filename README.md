@@ -147,3 +147,50 @@ Perfil: Todos os usuários
   2. Clica em "Sair"
   3. Sistema encerra sessão
   4. Retorna para a tela de Login
+
+
+
+
+# EcoTrilho + MySQL/PHP
+
+## O que mudou
+O projeto deixou de usar `localStorage` para os dados de usuários, trens e sensores. Agora os dados são enviados pelo JavaScript para arquivos PHP e ficam salvos no MySQL.
+
+`localStorage` ainda é usado apenas para manter no navegador a informação visual do usuário conectado, enquanto a autenticação é feita pelo PHP com sessão.
+
+## Requisitos
+- XAMPP ou outro servidor local com Apache + PHP + MySQL
+- MySQL Workbench (opcional, mas recomendado para visualizar o banco)
+
+## Como executar
+1. Coloque a pasta `atividade_sa_ecotrilho` dentro de `C:\xampp\htdocs\`.
+2. Abra o XAMPP e ligue **Apache** e **MySQL**.
+3. Abra o MySQL Workbench.
+4. Execute todo o arquivo `banco/ecotrilho.sql`.
+5. Confira em `api/conexao.php` se usuário, senha e banco estão iguais aos do seu MySQL.
+6. Abra no navegador:
+   `http://localhost/atividade_sa_ecotrilho/`
+7. Não abra o `index.html` diretamente pelo duplo clique, porque PHP precisa do Apache.
+
+## Login inicial
+- Usuário: `admin`
+- Senha: `123456`
+
+Também foram criados:
+- `carlos` / `123456`
+- `ana` / `123456`
+
+## Arquivos novos
+- `banco/ecotrilho.sql`
+- `api/conexao.php`
+- `api/funcoes.php`
+- `api/auth.php`
+- `api/usuarios.php`
+- `api/trens.php`
+- `api/sensores.php`
+- `api/configuracoes.php`
+- `api/perfil.php`
+- `js/api.js`
+
+## Observação
+As senhas são armazenadas com `password_hash()` e verificadas com `password_verify()`. A recuperação de senha não mostra a senha antiga, porque ela não é armazenada em texto puro.
