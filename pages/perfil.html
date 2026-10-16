@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | Ferrorama</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="system-body perfil-page">
+
+<aside class="sidebar">
+
+    <h2>🚂 Ferrorama</h2>
+
+    <nav>
+
+        <a href="dashboard.html">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </a>
+
+        <a href="trens.html">
+            <i class="fa-solid fa-train"></i>
+            Trens
+        </a>
+
+        <a href="sensores.html">
+            <i class="fa-solid fa-gauge-high"></i>
+            Sensores
+        </a>
+
+        <a href="rotas.html">
+            <i class="fa-solid fa-route"></i>
+            Rotas
+        </a>
+
+        <a href="relatorios.html">
+            <i class="fa-solid fa-file-lines"></i>
+            Relatórios
+        </a>
+
+        <a href="usuarios.html">
+            <i class="fa-solid fa-users"></i>
+            Usuários
+        </a>
+
+        <a href="perfil.html">
+            <i class="fa-solid fa-user-circle"></i>
+            Meu Perfil
+        </a>
+
+        <a href="configuracoes.html">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+        </a>
+
+        <a href="#" onclick="logout(); return false;">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Sair
+        </a>
+
+    </nav>
+
+</aside>
+
+    <main class="main perfil-main">
+
+        <div class="topbar">
+            <div>
+                <p class="perfil-kicker">CONTA E PREFERÊNCIAS</p>
+                <h1>Meu Perfil</h1>
+                <p>Atualize suas informações pessoais e sua foto.</p>
+            </div>
+        </div>
+
+        <div class="perfil-layout">
+
+            <section class="perfil-resumo">
+
+                <div class="perfil-cover"></div>
+
+                <div class="perfil-avatar-area">
+                    <img id="fotoPreview" class="perfil-avatar" src="../img/avatar-padrao.svg" alt="Foto do perfil">
+
+                    <label class="perfil-foto-botao" for="fotoPerfil">
+                        <i class="fa-solid fa-camera"></i>
+                    </label>
+                </div>
+
+                <h2 id="nomeResumo">Carregando perfil...</h2>
+
+                <p id="usuarioResumo" class="perfil-username"></p>
+
+                <span id="perfilTag" class="perfil-tag">Usuário</span>
+
+                <div class="perfil-resumo-dica">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Estas informações pertencem à sua conta.</span>
+                </div>
+
+            </section>
+
+            <section class="perfil-form-card">
+
+                <div class="perfil-secao-titulo">
+                    <div class="perfil-icone">
+                        <i class="fa-solid fa-user-pen"></i>
+                    </div>
+
+                    <div>
+                        <h2>Informações pessoais</h2>
+                        <p>Preencha os campos abaixo.</p>
+                    </div>
+                </div>
+
+                <form id="formPerfil">
+
+                    <div class="perfil-upload-linha">
+                        <div>
+                            <strong>Foto de perfil</strong>
+                            <p>JPG, PNG, WEBP ou GIF. Máximo de 3 MB.</p>
+                        </div>
+
+                        <div class="perfil-upload-acoes">
+                            <label for="fotoPerfil" class="btn-add">
+                                <i class="fa-solid fa-upload"></i>
+                                Escolher foto
+                            </label>
+
+                            <button type="button" id="removerFoto" class="btn-delete">
+                                Remover
+                            </button>
+                        </div>
+
+                        <input type="file" id="fotoPerfil" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+                    </div>
+
+                    <div class="perfil-campos-grid">
+
+                        <div class="perfil-campo">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" maxlength="100" required>
+                        </div>
+
+                        <div class="perfil-campo">
+                            <label for="usuario">Nome de usuário *</label>
+                            <input type="text" id="usuario" name="usuario" maxlength="50" required>
+                        </div>
+
+                        <div class="perfil-campo">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" maxlength="100" required>
+                        </div>
+
+                        <div class="perfil-campo">
+                            <label for="perfil">Tipo de acesso</label>
+                            <input type="text" id="perfil" readonly>
+                            <small>Este campo não pode ser alterado aqui.</small>
+                        </div>
+
+                    </div>
+
+                    <div class="perfil-separador"></div>
+
+                    <div class="perfil-secao-titulo">
+                        <div class="perfil-icone">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <div>
+                            <h2>Alterar senha</h2>
+                            <p>Deixe em branco se não quiser trocar a senha.</p>
+                        </div>
+                    </div>
+
+                    <div class="perfil-campos-grid">
+
+                        <div class="perfil-campo">
+                            <label for="senhaAtual">Senha atual</label>
+                            <input type="password" id="senhaAtual" autocomplete="current-password"
+                                placeholder="Sua senha atual">
+                        </div>
+
+                        <div class="perfil-campo">
+                            <label for="novaSenha">Nova senha</label>
+                            <input type="password" id="novaSenha" minlength="6" autocomplete="new-password"
+                                placeholder="Mínimo de 6 caracteres">
+                        </div>
+
+                    </div>
+
+                    <div id="mensagemPerfil" class="perfil-mensagem" role="status"></div>
+
+                    <div class="perfil-form-rodape">
+                        <span>
+                            <i class="fa-solid fa-circle-info"></i>
+                            Suas alterações serão salvas no sistema.
+                        </span>
+
+                        <button type="submit" class="btn-add" id="salvarPerfil">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Salvar alterações
+                        </button>
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/perfil.js"></script>
+
+</body>
+
+</html>
