@@ -172,25 +172,7 @@ O projeto deixou de usar `localStorage` para os dados de usuários, trens e sens
    `http://localhost/atividade_sa_ecotrilho/`
 7. Não abra o `index.html` diretamente pelo duplo clique, porque PHP precisa do Apache.
 
-## Login inicial
-- Usuário: `admin`
-- Senha: `123456`
 
-Também foram criados:
-- `carlos` / `123456`
-- `ana` / `123456`
-
-## Arquivos novos
-- `banco/ecotrilho.sql`
-- `api/conexao.php`
-- `api/funcoes.php`
-- `api/auth.php`
-- `api/usuarios.php`
-- `api/trens.php`
-- `api/sensores.php`
-- `api/configuracoes.php`
-- `api/perfil.php`
-- `js/api.js`
 
 ## Observação
 As senhas são armazenadas com `password_hash()` e verificadas com `password_verify()`. A recuperação de senha não mostra a senha antiga, porque ela não é armazenada em texto puro.
